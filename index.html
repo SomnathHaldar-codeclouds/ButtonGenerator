@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Button Generator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <!-- font-family: 'Roboto', sans-serif; -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap" rel="stylesheet">
+  <!-- font-family: 'Lato', sans-serif; -->
+  
+  <link rel="stylesheet" href="button.css">
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <p class="p-2 my-2 badge-info font-weight-bold text-center">More Buttons</p>
+            <div class="jumbotron">
+                <!-- <p>Button Content: <span id="btnInrVal"></span></p>
+                <p>Button Class: <span id="btnClsValue"></span></p> -->
+                <!-- <p>font size: <span id="fontValue"></span></p> -->
+                <!-- <p>Btn vertical size: <span id="btnVerSizeVal"></span></p> -->
+                <!-- <p>Btn horizantal size: <span id="btnHorSizeVal"></span></p> -->
+                <!-- <p>Btn Border radius: <span id="btnradiusVal"></span></p>
+                <p>Btn Border size: <span id="btnBrdrSizeVal"></span></p> -->
+            </div>
+        </div>             
+
+        <div class="col-5">
+            <p class="p-2 my-2 badge-info font-weight-bold text-center">Button Preview</p>
+            <div class="jumbotron d-flex align-items-center justify-content-center mb-3">
+                <a class="btn" id="btn">Click Me</a>
+            </div>
+            <div class="mb-4">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-check form-check-inline">
+                            <input type="color" class="btnbgBox" id="btn_bg_color" value="#44c767">
+                            <label class="form-check-label" for="btn_bg_color">Button BG Color</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="color" class="btnbgBox" id="btn_border_color" value="#18ab29">
+                            <label class="form-check-label" for="btn_border_color">Button Border Color</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="color" class="btnbgBox" id="btn_hover_color" value="#5cbf2a">
+                            <label class="form-check-label" for="btn_hover_color">Button Hover Color</label>
+                        </div>
+                        <div class="form-check form-check-inline" id="btn_bxshadow_colorBox">
+                            <input type="color" class="btnbgBox" id="btn_bxshadow_color" value="#5cbf2a">
+                            <label class="form-check-label" for="btn_bxshadow_color">Box Shadow Color</label>
+                        </div>
+                        <div class="form-check form-check-inline" id="btn_textshadow_colorBox">
+                            <input type="color" class="btnbgBox" id="btn_textshadow_color" value="#5cbf2a">
+                            <label class="form-check-label" for="btn_textshadow_color">Text Shadow Color</label>
+                        </div>
+                        
+                        
+                        
+                        
+                        <!-- <span class="btnbgBox btnBg-red d-inline-block"></span>
+                        <span class="btnbgBox btnBg-green d-inline-block"></span>
+                        <span class="btnbgBox btnBg-yellow d-inline-block"></span> -->
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="#!" id="getCode_btn" class=" btn btn-secondary">Get your code</a>
+            </div>
+            <div class="">
+                <p class="p-3 m-0">CSS Style</p>
+                
+            </div>
+            <div class="jumbotron">
+               <div id="codebox">
+                   <!-- <pre id="htmlCode"></pre> -->
+                    <span class="cssClassName" id="btnClsValue"></span> {<br><code><span class="css-style-code" id="css_style_code"></span></code>}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <p class="p-2 my-2 badge-info font-weight-bold text-center">Button Controller</p>            
+            <div class="mb-4">
+                <div class="px-3 py-1 mb-3 bg-light text-dark rounded styleTitle">Text</div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control mb-2" id="btn_content" placeholder="button Content">
+                        <input type="text" class="form-control mb-2" id="btn_cls" placeholder="Btn Class Name">
+                        <select class="form-control" name="" id="fontfamily">
+                            <option value="'Roboto', sans-serif">Roboto</option>
+                            <option value="Arial">Arial</option>
+                            <option value="'Lato', sans-serif">Lato</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="btn_font_size">Font-size: <span id="fontValue"></span></label>
+                        <input type="range" class="e-range" id="btn_font_size" value="17" min="0" max="50">
+                        <div class="clearfix"></div>
+                        <span class="badge badge-secondary inline-block mr-2">
+                            <input type="checkbox" class="inline-block" id="btn_font_bld">
+                            Bold
+                        </span>
+                        <span class="badge badge-secondary inline-block">
+                            <input type="checkbox" class="inline-block" id="btn_font_italic">
+                            Italic
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="px-3 py-1 mb-3 bg-light text-dark rounded styleTitle">Size</div>
+                <div class="row">
+                    <div class="col">
+                        <label for="btn_ver_size">Vertical Size: <span id="btnVerSizeVal"></span></label>
+                        <input type="range" class="e-range" id="btn_ver_size" max="100" value="16">
+                    </div>
+                    <div class="col">
+                        <label for="btn_hor_size">Horizontal Size: <span id="btnHorSizeVal"></span></label>
+                        <input type="range" class="e-range" id="btn_hor_size" max="100" value="31">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="px-3 py-1 mb-3 bg-light text-dark rounded styleTitle">Border</div>
+                <div class="row">
+                    <div class="col">
+                        <label for="btn_border_radius">Border Radius: <span id="btnradiusVal"></span></label>
+                        <input type="range" class="e-range" id="btn_border_radius" value="28">
+                    </div>
+                    <div class="col">
+                        <label for="btn_border_size">Border Size: <span id="btnBrdrSizeVal"></span></label>
+                        <input type="range" class="e-range" id="btn_border_size" max="10" value="1">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="px-3 py-1 mb-3 bg-light text-dark rounded styleTitle d-flex">
+                    <div class="custom-control custom-checkbox mr-2">
+                        <input type="checkbox" class="custom-control-input" id="boxShadow">
+                        <label class="custom-control-label" for="boxShadow">Box Shadow</label>
+                    </div>
+                    /
+                    <div class="custom-control custom-checkbox ml-2">
+                        <input type="checkbox" class="custom-control-input" id="boxshadow_inset">
+                        <label class="custom-control-label" for="boxshadow_inset">inset</label>
+                    </div>                      
+                </div>
+                <div id="boxshadowStylebox">
+                    <div class="row">
+                        <div class="col">
+                            <label for="btn_boxShadow_ver">Vertical Position: <span id="btn_boxShadow_verVal"></span></label>
+                            <input type="range" class="e-range" id="btn_boxShadow_ver" min="-50" max="50" value="0" >
+                        </div>
+                        <div class="col">
+                            <label for="btn_boxShadow_hor">Horizontal Position: <span id="btn_boxShadow_horVal"></span></label>
+                            <input type="range" class="e-range" id="btn_boxShadow_hor" min="-50" max="50" value="0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="btn_boxShadow_blur">Blur Radius: <span id="btn_boxShadow_blurVal"></span></label>
+                            <input type="range" class="e-range" id="btn_boxShadow_blur" value="0">
+                        </div>
+                        <div class="col">
+                            <label for="btn_boxShadow_spread">Spread Radius: <span id="btn_boxShadow_spreadVal"></span></label>
+                            <input type="range" class="e-range" id="btn_boxShadow_spread" min="-50" max="50" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5">
+                <div class="px-3 py-1 mb-3 bg-light text-dark rounded styleTitle">
+                    <div class="custom-control custom-checkbox mr-2">
+                        <input type="checkbox" class="custom-control-input" id="textShadow">
+                        <label class="custom-control-label" for="textShadow">Text Shadow</label>
+                    </div>
+                </div>
+                <div id="textshadowStylebox">
+                    <div class="row">
+                        <div class="col">
+                            <label for="btn_txtshadow_ver">Vertical Position: <span id="btn_txtshadow_verVal">21px</span></label>
+                            <input type="range" class="e-range" id="btn_txtshadow_ver" min="-50" max="50">
+                        </div>
+                        <div class="col">
+                            <label for="btn_txtshadow_hor">Horizontal Size: <span id="btn_txtshadow_horVal">21px</span></label>
+                            <input type="range" class="e-range" id="btn_txtshadow_hor" min="-50" max="50">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="btn_textShadow_blur">Blur Radius: <span id="btn_textShadow_blurVal">21px</span></label>
+                            <input type="range" class="e-range" id="btn_textShadow_blur" max="50" value="0">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>  
+        
+    </div>
+
+</div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="button.js"></script>
+
+</body>
+</html>
